@@ -19,13 +19,14 @@ import ReactDOM from "react-dom";
 const reactContentRoot = document.getElementById("root");
 
 const App = () => {
-	const myItem = "Ekene";
+	const myItem = "Ekene ";
 
 	return (
 		<ul>
-			<li>item1</li>
-			<li>item255 {myItem}</li>
+			<li>item 123</li>
+			<li>item 456 {myItem}</li>
 			<li>{myItem.toUpperCase()}</li>
+			<li>{myItem}</li>
 		</ul>
 	);
 };
