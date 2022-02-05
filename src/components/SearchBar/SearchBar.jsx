@@ -8,11 +8,15 @@ const SearchBar = () => {
 		setSearchValue(event.target.value);
 	};
 
+	const handleClearBtn = () => {
+		setSearchValue("");
+	};
+
 	return (
 		<div className="">
 			<input type="text" value={searchValue} onChange={handleInputChange} />
 			<h3>{searchValue}</h3>
-			<h2>Search-Bar</h2>
+			<button onClick={handleClearBtn}>Clear Input</button>
 		</div>
 	);
 };
