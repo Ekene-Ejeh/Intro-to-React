@@ -4,7 +4,9 @@ import CountBtn from "./CountBtn";
 const App = () => {
 	return (
 		<div>
-			<CountBtn />
+			<CountBtn incrementBy={1} />
+			<CountBtn incrementBy={5} />
+			<CountBtn incrementBy={8} />
 		</div>
 	);
 };
