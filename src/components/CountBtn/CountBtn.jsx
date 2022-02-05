@@ -15,6 +15,7 @@ const CountBtn = (props) => {
 		border: "1px solid blue",
 		borderRadius: "12px",
 		padding: "10px",
+		margin: "10px",
 	};
 
 	const btnStyles = {
