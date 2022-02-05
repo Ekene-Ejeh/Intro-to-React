@@ -1,5 +1,5 @@
 import React from "react";
-import CountBtn from "./CountBtn";
+import CountBtn from "./CountBtn/CountBtn";
 
 const App = () => {
 	return (
