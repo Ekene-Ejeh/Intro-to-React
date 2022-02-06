@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
-const products = [
-	"Tooth paste",
-	"Tooth brush",
-	"Mouth wash",
-	"Dental floss",
-	"Mouth Guard",
-];
-
 // storing the input in a state
-const SearchBar = () => {
+const SearchBar = (props) => {
 	const [searchValue, setSearchValue] = useState("");
 
 	// displaying the input when changed
@@ -25,6 +17,10 @@ const SearchBar = () => {
 	// conditional rendering on the clear btn
 	const shouldDisplayClearBtn = searchValue.length > 0;
 
+	const filteredProducts = props.products.filter((product) => {
+		return product.includes(searchValue);
+	});
+
 	return (
 		<div className="">
 			<input type="text" value={searchValue} onChange={handleInputChange} />
@@ -33,9 +29,11 @@ const SearchBar = () => {
 				<button onClick={handleClearBtn}>Clear Input</button>
 			)}
 
-			{products.map((product) => {
-				return <li>{product}</li>;
-			})}
+			<ol>
+				{filteredProducts.map((product) => {
+					return <li key={product}>{product}</li>;
+				})}
+			</ol>
 		</div>
 	);
 };
